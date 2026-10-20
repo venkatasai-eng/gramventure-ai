@@ -240,8 +240,8 @@ GramVenture AI features a complete centralized internationalization dictionary (
 
 ## 11. Live Deployment & Repository
 
-* **GitHub Repository:** [https://github.com/venkatasaiguggilla620-prog/gramventure-ai](https://github.com/venkatasaiguggilla620-prog/gramventure-ai)
-* **Live Website URL:** Deployed and publicly accessible.
+* **GitHub Repository:** [https://github.com/venkatasai-eng/gramventure-ai](https://github.com/venkatasai-eng/gramventure-ai)
+* **Live Website URL:** [https://venkatasai-eng.github.io/gramventure-ai/](https://venkatasai-eng.github.io/gramventure-ai/)
 
 ---
 

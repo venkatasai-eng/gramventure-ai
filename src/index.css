@@ -1,0 +1,160 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-50: #f0fdf4;
+  --color-primary-100: #dcfce7;
+  --color-primary-200: #bbf7d0;
+  --color-primary-300: #86efac;
+  --color-primary-400: #4ade80;
+  --color-primary-500: #16a34a;
+  --color-primary-600: #15803d;
+  --color-primary-700: #166534;
+  --color-primary-800: #14532d;
+  --color-primary-900: #052e16;
+  --color-primary-950: #0a1f16;
+  --color-forest: #123B2A;
+  --color-emerald-brand: #23835B;
+  --color-warm-white: #F7F6F0;
+  --color-saffron: #E7A23B;
+  --color-charcoal: #202A26;
+  --color-muted-gray: #69756E;
+  --color-risk-red: #C94C4C;
+  --color-accent-50: #fffbeb;
+  --color-accent-100: #fef3c7;
+  --color-accent-200: #fde68a;
+  --color-accent-300: #fcd34d;
+  --color-accent-400: #fbbf24;
+  --color-accent-500: #f59e0b;
+  --color-accent-600: #d97706;
+  --color-accent-700: #b45309;
+  --color-surface: #faf9f6;
+  --color-surface-warm: #f5f3ee;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-gray-900 antialiased;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-lg border border-gray-200 shadow-sm;
+  }
+
+  .card-header {
+    @apply px-6 py-4 border-b border-gray-100;
+  }
+
+  .card-body {
+    @apply px-6 py-4;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-4 py-2.5 bg-primary-600 text-white font-medium 
+           rounded-lg hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 
+           focus:ring-offset-2 transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-4 py-2.5 bg-white text-primary-700 font-medium 
+           rounded-lg border border-primary-300 hover:bg-primary-50 focus:outline-none focus:ring-2 
+           focus:ring-primary-500 focus:ring-offset-2 transition-colors duration-150;
+  }
+
+  .btn-accent {
+    @apply inline-flex items-center justify-center px-4 py-2.5 bg-accent-500 text-white font-medium 
+           rounded-lg hover:bg-accent-600 focus:outline-none focus:ring-2 focus:ring-accent-400 
+           focus:ring-offset-2 transition-colors duration-150;
+  }
+
+  .input-field {
+    @apply w-full px-3 py-2.5 border border-gray-300 rounded-lg text-sm 
+           focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500
+           placeholder:text-gray-400 disabled:bg-gray-50 disabled:text-gray-500;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-gray-700 mb-1;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .badge-official {
+    @apply bg-blue-100 text-blue-800;
+  }
+
+  .badge-verified {
+    @apply bg-green-100 text-green-800;
+  }
+
+  .badge-user {
+    @apply bg-purple-100 text-purple-800;
+  }
+
+  .badge-estimate {
+    @apply bg-amber-100 text-amber-800;
+  }
+
+  .badge-missing {
+    @apply bg-red-100 text-red-800;
+  }
+
+  .section-title {
+    @apply text-xl font-semibold text-gray-900 flex items-center gap-2;
+  }
+
+  .metric-card {
+    @apply bg-white rounded-lg border border-gray-200 p-4 shadow-sm;
+  }
+
+  .metric-value {
+    @apply text-2xl font-bold text-gray-900;
+  }
+
+  .metric-label {
+    @apply text-sm text-gray-500 mt-1;
+  }
+
+  .warning-box {
+    @apply bg-amber-50 border border-amber-200 rounded-lg p-4 text-amber-800 text-sm;
+  }
+
+  .info-box {
+    @apply bg-blue-50 border border-blue-200 rounded-lg p-4 text-blue-800 text-sm;
+  }
+
+  .danger-box {
+    @apply bg-red-50 border border-red-200 rounded-lg p-4 text-red-800 text-sm;
+  }
+
+  .success-box {
+    @apply bg-green-50 border border-green-200 rounded-lg p-4 text-green-800 text-sm;
+  }
+}
+
+/* Print styles for report generation */
+@media print {
+  body {
+    background: white !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-break {
+    page-break-before: always;
+  }
+  .card {
+    border: 1px solid #e5e7eb !important;
+    box-shadow: none !important;
+    break-inside: avoid;
+  }
+}

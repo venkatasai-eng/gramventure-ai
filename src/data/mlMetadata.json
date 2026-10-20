@@ -1,0 +1,58 @@
+{
+  "model_name": "RandomForestClassifier",
+  "model_version": "1.0.0-synthetic-proof-of-concept",
+  "dataset_version": "sample_entrepreneur_dataset_v1",
+  "random_seed": 42,
+  "train_samples": 419,
+  "val_samples": 91,
+  "test_samples": 90,
+  "metrics": {
+    "accuracy": 0.9,
+    "precision": 0.9107,
+    "recall": 0.9273,
+    "f1_score": 0.9189,
+    "roc_auc": 0.9439,
+    "confusion_matrix": [
+      [
+        30,
+        5
+      ],
+      [
+        4,
+        51
+      ]
+    ]
+  },
+  "features_used": [
+    "entrepreneur_experience_years",
+    "business_experience_years",
+    "available_investment",
+    "total_project_cost",
+    "requested_loan_amount",
+    "expected_monthly_revenue",
+    "expected_monthly_operating_cost",
+    "local_demand_score",
+    "competitor_count_5km",
+    "average_competitor_distance_km",
+    "estimated_customer_count",
+    "expected_monthly_sales_volume",
+    "supplier_availability_score",
+    "market_accessibility_score",
+    "seasonality_risk_score",
+    "business_risk_score",
+    "district",
+    "location_type",
+    "business_category"
+  ],
+  "excluded_demographics": [
+    "age",
+    "education_level"
+  ],
+  "excluded_leakage_features": [
+    "estimated_monthly_profit",
+    "estimated_monthly_loan_repayment",
+    "estimated_monthly_cash_flow",
+    "entrepreneur_id"
+  ],
+  "critical_limitation": "Because the training records and labels are synthetic, metrics only demonstrate that the scikit-learn pipeline runs correctly on the generated data. They do NOT validate prediction of real-world business success. This output must be labeled as an experimental synthetic-data model output\u2014not a real-world success probability."
+}
